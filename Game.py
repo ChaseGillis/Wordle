@@ -27,6 +27,9 @@ while True:
     while x != 6 and guess != wordle:
         while True:
             guess = input('Guess the word: ')
+            if guess not in allwords:
+                print('Thats not a word')
+                continue
             if len(guess) == 5 and guess.isalpha():
                 guess = guess.upper()
                 break
